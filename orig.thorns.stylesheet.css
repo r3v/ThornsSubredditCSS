@@ -1,0 +1,24 @@
+  /*Subscribers*/
+ .subscribers .word {
+ display: none;
+ }  
+ .subscribers .number::after {
+  content: " Supporters";
+  }
+
+ /*Riveters here now*/
+ .users-online .word {
+ display: none;
+ }
+ .users-online .number::after {
+ content: " Users here now";
+ }
+div.sidebox.create{display: none;}
+#header-bottom-left {
+    background-color: #000000;
+}
+
+a.author.moderator, .res a.author.moderator {
+color:red!important;
+background-color: black !important;
+}
