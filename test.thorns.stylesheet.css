@@ -1,3 +1,137 @@
+/*
+	THORNS SUBREDDIT CSS by /u/r3v
+	GitHub Repository: https://github.com/r3v/ThornsSubredditCSS
+	
+	VERSION 1.0
+	
+	HISTORY: 
+		1.0 - Initial launch version
+*/
+
+/* TEMP!  REPLACE WITH THE RANDOM IMAGE */
+/* PORTLAND THORNS LOGO IN SIDEBAR */
+.titlebox .redditname {
+    position: relative;
+}
+.titlebox .redditname:before {
+    content: url(%%Portland-Thorns-FC-logo-300%%);
+}
+
+
+
+/* BEGIN CHANGES FOR HEADER SECTION ------------------------------------------- */
+
+
+/* SHORTCUT BAR */
+#sr-header-area {
+	background-color: #000000;
+	color: #000000;
+}
+#sr-header-area a {
+	color: #C9C9C9;
+}
+
+
+/* CHANGES HEADER BACKGROUND COLOR */
+div.sidebox.create{
+	display: none;
+}
+#header-bottom-left {
+	 background-color: #D90000;
+}
+
+
+/* CHANGES HEADER SUBREDDIT NAME TO THORNS LOGO */
+.pagename a{
+	background:url(%%Portland-Thorns-FC-logo-100%%);
+	height: 100px;
+	width: 100px;
+}
+#header-bottom-left{
+	height: 100px;
+}
+.pagename a{
+	text-indent:-9001px;
+}
+#header-img-a, .pagename a, .tabmenu {
+	display: inline;
+	float: left;
+}
+.tabmenu{
+	position:relative;
+	top:100%;
+	margin-top:-16px!important;
+}
+
+
+/* ANNOUNCEMENT BAR IN HEADER */ /* Based on http://redd.it/mw2ip */
+.titlebox form {
+	/* Hack to enable repositioning of child elements */
+	position: static
+}
+.side h3:nth-of-type(1) {
+	/* this code positions the sticky */
+	z-index: 100;
+	position:absolute;
+	display: block;
+	top:43px;
+	left:170px;   /* 170 for next to the logo */
+	/* this code styles the sticky */
+	background-color: #FFFFFF;
+	color: #000000;
+	text-align: left;
+	margin: 15px;
+	border-radius: 2px;
+	width: 100%;
+	padding: 0px 0px 0px 10px; /* last value positions start of text in the bar */
+}
+.side h3:nth-of-type(1) a {
+	color: #FF0000;
+}
+
+
+/* TAB MENU CHANGES */
+#header .tabmenu li a {
+	color: #FFFFFF;
+	background-color: #333333;
+    border-top-left-radius:4px;  /* Rounds the corners */
+    border-top-right-radius:4px  /* Rounds the corners */
+}
+#header .tabmenu li.selected a {
+	color: #FF0000;
+	background-color: #FFFFFF;
+}
+#header-bottom-right {
+	background-color: #FFFFFF;
+	color: #000000;
+	padding: 4px;
+	-moz-border-radius-topleft: 7px;
+	-webkit-border-top-left-radius: 7px
+}
+#header-bottom-right a {
+	color: #000000
+}
+#header-bottom-right b {
+	color: #000000
+}
+
+
+/* END CHANGES FOR HEADER SECTION ------------------------------------------- */
+
+/* BEGIN CHANGES FOR SIDEBAR SECTION ------------------------------------------- */
+
+
+/* CHANGES TO SUBREDDIT NAME IN SIDEBAR */
+.side .redditname {
+font-size:0;
+	 text-align: center ;
+}
+.side .redditname:after {
+	 font-size:18px;
+	 content:"/r/Thorns";
+}
+
+
 /* SUBSCRIBERS/HERE NOW CHANGES */
 .subscribers .word {
  	display: none;
@@ -12,22 +146,166 @@
 	content: " Riveters here now";
 }
 
-/* CHANGES HEADER BACKGROUND COLOR */
-div.sidebox.create{display: none;}
-#header-bottom-left {
-    background-color: #000000;
+
+/* CHANGES TO THE LINKINFO BOX IN SIDEBAR */
+.linkinfo  {
+    background-color:#D90000;
+    color:#FFFFFF;
+    text-align:center;
+    border:0;
+    margin:0 auto 3px auto;
 }
 
-/* COLOR OF STICKIED POST TITLE & TAG */
-.stickied .title { color: #FF0000 !important; }
-.stickied .title:visited { color: #D90000 !important; }
-.stickied .stickied-tagline { color: #D90000 !important; }
+
+/* PRETTY SUBMIT LINKS by /u/RainbowCrash*/
+.morelink {
+	font-weight:normal;
+	letter-spacing:0;
+	background: black;
+	border: none;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	-o-border-radius:2px;
+	-ms-border-radius:2px;
+	-khtml-border-radius:2px;
+	border-radius:2px;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	color: white;
+}
+.morelink:hover {
+	background: #A7B9CB;
+	background-color: #FF0000;
+	border-color: #000000;
+}
+.morelink .nub {
+	display: none;
+}
+.morelink {
+	color:#FFFFFF; 
+	font-family:Verdana, Arial, sans-serif; 
+	font-size:16px; 
+	width: 145px;
+}
+.morelink a, .morelink a:hover {
+	color: white;
+}
+.sidebox.submit-link .morelink::before {
+	display: block;
+	clear: none;
+	content: "Submit a Link";
+	font-size: 95%;
+}
+.sidebox.submit-text .morelink::before {
+	display: block;
+	clear: none;
+	content: "Submit a Self Post";
+	font-size: 90%;
+}
+.sidebox.submit .morelink a {
+	position: absolute;
+	top: 0;
+	padding-left: 1000px;
+	font-size: 0px;
+	text-align: right;
+	color: #56a6f7;
+}
+.sidebox.submit.submit-link {
+	width: 150px;
+}
+.sidebox.submit.submit-text {
+	margin-top: -42px; /*Edit this is so the buttons aren't parallel*/
+	margin-left: 153px;
+}
+.sidebox.create {
+	display: none;
+}
+.sidebox.submit.disabled {
+	display: none;
+}
+/* NIGHTMODE FIXES */
+.res-nightmode .sidebox.submit.submit-text {
+	background: none !important;
+	margin-top: -45px;
+	margin-left: 153px;
+}
+.res-nightmode .sidebox {
+	padding-left: 0px !important;
+	border: 2px solid #151515 !important;
+}
+.res-nightmode .morelink {
+	 height: 29px !important;
+}
+.res-nightmode .morelink {
+	background:rgb(39, 63, 87) !important;
+}
+.res-nightmode .morelink:hover {
+	background: #449ef8 !important;
+	background-color: #9edbf8 !important;
+	border-color: #9edbf8 !important;
+}
+/* END NIGHTMODE FIX */
+/* END PRETTY SUBMIT LINKS */
 
 
-/* WHAT DOES THIS DO? */
+/* END CHANGES FOR SIDEBAR SECTION ------------------------------------------- */
+
+/* BEGIN MISCELLANEOUS CHANGES  ------------------------------------------- */
+
+
+/* SELF-POST THUMBNAIL ICON */
+/* BUG: THIS WORKS, BUT IS CLEARLY NOT RIGHT. */
+.self .thumbnail {
+	background-image: url(%%Portland-Thorns-FC-logo-faded-70x50%%);
+	height: 50px;
+} 
+.self .thumbnail {
+	background: url(%%Portland-Thorns-FC-logo-faded-70x50%%) no-repeat 0 0;
+	height: 50px;
+}
+
+
+/* CHANGE MOD HIGHLIGHT */
 a.author.moderator, .res a.author.moderator {
-	color:red!important;
-	background-color: black !important;
+	 color: #D90000;
+	 padding: 2px;
+	 border-radius: 1px;
+	 font-weight: bold
+}
+
+
+/* TEXT BOX FOR SELF POSTS */
+.link .expando .usertext .md {
+	border: 1px solid #000000 !important;
+	background-color: #FFFFFF !important;
+}
+
+
+/* COLOR OF STICKIED POST TITLE & TAG */
+.stickied .title {
+	color: #FF0000 !important;
+}
+.stickied .title:visited {
+	color: #D90000 !important;
+}
+.stickied .stickied-tagline {
+	color: #D90000 !important;
+}
+
+
+/* LINK COLOR CHANGES */
+.title.click, .title:visited {
+	color: #FF0000 !important;
+}
+.title:link {
+	color: #990000 !important;
+}
+.side p a {
+	color: #FF0000;
+}
+.side table a {
+	color: #FF0000;
 }
 
 
