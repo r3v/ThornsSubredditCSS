@@ -1,0 +1,72 @@
+/* SUBSCRIBERS/HERE NOW CHANGES */
+.subscribers .word {
+ 	display: none;
+}  
+.subscribers .number::after {
+	content: " Supporters";
+}
+.users-online .word {
+	display: none;
+}
+.users-online .number::after {
+	content: " Riveters here now";
+}
+
+/* CHANGES HEADER BACKGROUND COLOR */
+div.sidebox.create{display: none;}
+#header-bottom-left {
+    background-color: #000000;
+}
+
+/* COLOR OF STICKIED POST TITLE & TAG */
+.stickied .title { color: #FF0000 !important; }
+.stickied .title:visited { color: #D90000 !important; }
+.stickied .stickied-tagline { color: #D90000 !important; }
+
+
+/* WHAT DOES THIS DO? */
+a.author.moderator, .res a.author.moderator {
+	color:red!important;
+	background-color: black !important;
+}
+
+
+/* FLAIR CSS */
+.flairselector .customizer {
+	display: none !important;
+}
+.flair {
+	border: none !important;
+	padding:0px;
+	background: url(%%spritesheet%%) no-repeat -9999px -9999px;
+	display:inline-block;
+	text-indent: -9999em;
+	white-space: nowrap;
+}
+.flair-NWSL{
+	background-position: 0 0; 
+	min-width: 22px; 
+	height: 22px;
+	line-height: 22px; 
+}
+.flair-NWSL:hover {
+	text-indent: 24px;
+}
+.flair-Riveters{ 
+	background-position: 0 -72px; 
+	min-width: 22px; 
+	height: 22px;
+	line-height: 22px; 
+}
+.flair-Riveters:hover {
+	text-indent: 24px;
+}
+.flair-Thorns{ 
+	background-position: 0 -144px; 
+	min-width: 22px; 
+	height: 22px; 
+	line-height: 22px; 
+} 
+.flair-Thorns:hover {
+	text-indent: 24px;
+}

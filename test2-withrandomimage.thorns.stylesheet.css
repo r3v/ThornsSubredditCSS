@@ -9,19 +9,134 @@
 */
 
 
-
 /* TEMP!  REPLACE WITH THE RANDOM IMAGE */
 /* PORTLAND THORNS LOGO IN SIDEBAR */
+/* 
 .titlebox .redditname {
     position: relative;
 }
 .titlebox .redditname:before {
     content: url(%%Portland-Thorns-FC-logo-300%%);
 }
+ */
 
 
 
-/* BEGIN CHANGES FOR HEADER SECTION ------------------------------------------- */
+/* 270 will need to be adjusted depending on the height of your rand image */
+.side {
+    position: absolute;
+    top: 350px; /*was 270 */
+    right: 0;
+}
+
+/* The height and width of all images must match. Change 228 and 300 to match your image dimensions. */
+input[name=uh] ~ a:after,
+.user .login-required:after {
+    position: absolute;
+    top: 23px;
+    right: 0;
+    z-index: 0;
+    width: 300px;
+    height: 300px; /* was 228 */
+    border: 0;
+}
+
+
+/* Name all your images rand followed by 0-9 and a-z, you can have 36 possible
+   random images, feel free to reuse images if you have less than 36. For
+   example, you could have 12 images repeated 3 times.
+*/
+input[name=uh][value^="0"] ~ a:after { content: url('%%rand-01%%'); }
+input[name=uh][value^="1"] ~ a:after { content: url('%%rand-02%%'); }
+input[name=uh][value^="2"] ~ a:after { content: url('%%rand-03%%'); }
+input[name=uh][value^="3"] ~ a:after { content: url('%%rand-04%%'); }
+input[name=uh][value^="4"] ~ a:after { content: url('%%rand-05%%'); }
+input[name=uh][value^="5"] ~ a:after { content: url('%%rand-06%%'); }
+input[name=uh][value^="6"] ~ a:after { content: url('%%rand-07%%'); }
+input[name=uh][value^="7"] ~ a:after { content: url('%%rand-01%%'); }
+input[name=uh][value^="8"] ~ a:after { content: url('%%rand-02%%'); }
+input[name=uh][value^="9"] ~ a:after { content: url('%%rand-03%%'); }
+input[name=uh][value^="a"] ~ a:after { content: url('%%rand-04%%'); }
+input[name=uh][value^="b"] ~ a:after { content: url('%%rand-05%%'); }
+input[name=uh][value^="c"] ~ a:after { content: url('%%rand-06%%'); }
+input[name=uh][value^="d"] ~ a:after { content: url('%%rand-07%%'); }
+input[name=uh][value^="e"] ~ a:after { content: url('%%rand-01%%'); }
+input[name=uh][value^="f"] ~ a:after { content: url('%%rand-02%%'); }
+input[name=uh][value^="g"] ~ a:after { content: url('%%rand-03%%'); }
+input[name=uh][value^="h"] ~ a:after { content: url('%%rand-04%%'); }
+input[name=uh][value^="i"] ~ a:after { content: url('%%rand-05%%'); }
+input[name=uh][value^="j"] ~ a:after { content: url('%%rand-06%%'); }
+input[name=uh][value^="k"] ~ a:after { content: url('%%rand-07%%'); }
+input[name=uh][value^="l"] ~ a:after { content: url('%%rand-01%%'); }
+input[name=uh][value^="m"] ~ a:after { content: url('%%rand-02%%'); }
+input[name=uh][value^="n"] ~ a:after { content: url('%%rand-03%%'); }
+input[name=uh][value^="o"] ~ a:after { content: url('%%rand-04%%'); }
+input[name=uh][value^="p"] ~ a:after { content: url('%%rand-05%%'); }
+input[name=uh][value^="q"] ~ a:after { content: url('%%rand-06%%'); }
+input[name=uh][value^="r"] ~ a:after { content: url('%%rand-07%%'); }
+input[name=uh][value^="s"] ~ a:after { content: url('%%rand-01%%'); }
+input[name=uh][value^="t"] ~ a:after { content: url('%%rand-02%%'); }
+input[name=uh][value^="u"] ~ a:after { content: url('%%rand-03%%'); }
+input[name=uh][value^="v"] ~ a:after { content: url('%%rand-04%%'); }
+input[name=uh][value^="w"] ~ a:after { content: url('%%rand-05%%'); }
+input[name=uh][value^="x"] ~ a:after { content: url('%%rand-06%%'); }
+input[name=uh][value^="y"] ~ a:after { content: url('%%rand-07%%'); }
+input[name=uh][value^="z"] ~ a:after { content: url('%%rand-01%%'); }
+
+/* Moves the username and bar to the top, may need adjustment depending on
+   your other subreddit css. */
+#header-bottom-right {
+    position: absolute;
+    right: 0px;
+    top: 19px;
+    padding: 4px 4px 4px 7px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 7px;
+    line-height: 12px;
+    height: 15px;
+ }
+ 
+ 
+ /* Adjust the -228 to match the height of your image. Along with the 300 and
+   228 to match the width and height of your image. At the end of your sidebar
+   description create an H5 link to your subreddit homepage.
+   Like this:  #####[Subreddit Name](http://reddit.com/r/SubredditName)
+*/
+.side .usertext-body h5:last-of-type a {
+    position: absolute;
+    top: -228px;
+    right: -5px;
+    width: 300px;
+    height: 300px; /* was 228 */
+    z-index: 100;
+    border: 0px;
+    font-size: 0px;
+}
+
+/* HOW THIS ALL WORKS:
+
+   Everytime you load the page there is an invisible form (input) that relates
+   to the logout button which generates a long random letter-number combo. This
+   code takes the first digit of that code and then displays a specific image
+   dependent on the letter or number that was generated when the page loaded.
+   Since the random character comes from the logout button there are a few things
+   to take in to consideration. Firstly, the random image that is created will
+   log you out if you click on it. So part of this code repositions a link from
+   the sidebar above the random image, so clicking on it will take you to the link
+   instead of logging you out. The other is that if a user isn't logged in the
+   link to logout won't exist, so neither will the random image. It only
+   displays to users who are logged in. So we target the Login link for those users
+   and put a static image there that is only visible to people not logged in. This
+   would prevent the page from having an empty chunk above the sidebar for
+   non-logged in viewers. The code for this is below.
+*/
+
+/* Pick your favorite of the random images to be the static one that loads for non-logged in users.*/
+.user .login-required:after { content: url('%%rand-07%%'); }
+
+
+
+/* BEGIN CHANGES FOR HEADER SECTION --------------------------------------------------- */
 
 
 /* SHORTCUT BAR */
@@ -118,9 +233,9 @@ div.sidebox.create{
 }
 
 
-/* END CHANGES FOR HEADER SECTION ------------------------------------------- */
+/* END CHANGES FOR HEADER SECTION ----------------------------------------------------- */
 
-/* BEGIN CHANGES FOR SIDEBAR SECTION ------------------------------------------- */
+/* BEGIN CHANGES FOR SIDEBAR SECTION -------------------------------------------------- */
 
 
 /* CHANGES TO SUBREDDIT NAME IN SIDEBAR */
@@ -251,9 +366,9 @@ font-size:0;
 /* END PRETTY SUBMIT LINKS */
 
 
-/* END CHANGES FOR SIDEBAR SECTION ------------------------------------------- */
+/* END CHANGES FOR SIDEBAR SECTION ---------------------------------------------------- */
 
-/* BEGIN MISCELLANEOUS CHANGES  ------------------------------------------- */
+/* BEGIN MISCELLANEOUS CHANGES  ------------------------------------------------------- */
 
 
 /* SELF-POST THUMBNAIL ICON */
@@ -311,6 +426,11 @@ a.author.moderator, .res a.author.moderator {
 }
 
 
+/* END MISCELLANEOUS CHANGES  --------------------------------------------------------- */
+
+/* BEGIN CUSTOM FLAIR CSS ------------------------------------------------------------- */
+
+
 /* FLAIR CSS */
 .flairselector .customizer {
 	display: none !important;
@@ -350,3 +470,16 @@ a.author.moderator, .res a.author.moderator {
 .flair-Thorns:hover {
 	text-indent: 24px;
 }
+
+/* END CUSTOM FLAIR CSS --------------------------------------------------------------- */
+
+/* Resource List:
+	%%Portland-Thorns-FC-logo-300%% - 300x300 Thorns logo
+	%%Portland-Thorns-FC-logo-100%% - 100x100 Thorns logo
+	%%Portland-Thorns-FC-logo-faded-70x50%% - Used for self post thumbnail
+	%%spritesheet%% - Sprite sheet for flair. 
+	    (Made with: http://spritegen.website-performance.org/oldsites/spritegen/htdocs/)
+*/
+
+
+

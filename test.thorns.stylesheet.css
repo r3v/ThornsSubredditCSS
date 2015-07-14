@@ -9,19 +9,18 @@
 */
 
 
-
 /* TEMP!  REPLACE WITH THE RANDOM IMAGE */
 /* PORTLAND THORNS LOGO IN SIDEBAR */
 .titlebox .redditname {
     position: relative;
 }
 .titlebox .redditname:before {
-    content: url(%%Portland-Thorns-FC-logo-300%%);
+    content: url(%%sidebar-image%%);
 }
 
 
 
-/* BEGIN CHANGES FOR HEADER SECTION ------------------------------------------- */
+/* BEGIN CHANGES FOR HEADER SECTION --------------------------------------------------- */
 
 
 /* SHORTCUT BAR */
@@ -118,9 +117,9 @@ div.sidebox.create{
 }
 
 
-/* END CHANGES FOR HEADER SECTION ------------------------------------------- */
+/* END CHANGES FOR HEADER SECTION ----------------------------------------------------- */
 
-/* BEGIN CHANGES FOR SIDEBAR SECTION ------------------------------------------- */
+/* BEGIN CHANGES FOR SIDEBAR SECTION -------------------------------------------------- */
 
 
 /* CHANGES TO SUBREDDIT NAME IN SIDEBAR */
@@ -251,9 +250,9 @@ font-size:0;
 /* END PRETTY SUBMIT LINKS */
 
 
-/* END CHANGES FOR SIDEBAR SECTION ------------------------------------------- */
+/* END CHANGES FOR SIDEBAR SECTION ---------------------------------------------------- */
 
-/* BEGIN MISCELLANEOUS CHANGES  ------------------------------------------- */
+/* BEGIN MISCELLANEOUS CHANGES  ------------------------------------------------------- */
 
 
 /* SELF-POST THUMBNAIL ICON */
@@ -311,6 +310,11 @@ a.author.moderator, .res a.author.moderator {
 }
 
 
+/* END MISCELLANEOUS CHANGES  --------------------------------------------------------- */
+
+/* BEGIN CUSTOM FLAIR CSS ------------------------------------------------------------- */
+
+
 /* FLAIR CSS */
 .flairselector .customizer {
 	display: none !important;
@@ -350,3 +354,17 @@ a.author.moderator, .res a.author.moderator {
 .flair-Thorns:hover {
 	text-indent: 24px;
 }
+
+/* END CUSTOM FLAIR CSS --------------------------------------------------------------- */
+
+/* Resource List:
+	%%Portland-Thorns-FC-logo-300%% - 300x300 Thorns logo
+	%%Portland-Thorns-FC-logo-100%% - 100x100 Thorns logo
+	%%Portland-Thorns-FC-logo-faded-70x50%% - Used for self post thumbnail
+	%%sidebar-image%% - 300x300 Image for the top of the sidebar
+	%%spritesheet%% - Sprite sheet for flair. 
+	    (Made with: http://spritegen.website-performance.org/oldsites/spritegen/htdocs/)
+*/
+
+
+
