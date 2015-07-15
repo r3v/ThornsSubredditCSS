@@ -9,7 +9,8 @@ Maintained by /u/r3v
 ### TODO LIST:
 
 * Random sidebar image
-* Table Header, Table Body
-* Color for "RES-keyNav-activeElement"
-* Color for RES "userbarToggle"
+* Sidebar Table Header, Table Body
+* √	Color for "RES-keyNav-activeElement"
+* √	Color for RES "userbarToggle"
 * Color for Highlighted replies since X
+* Color for RESShortcuts

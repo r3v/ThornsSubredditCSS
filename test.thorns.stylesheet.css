@@ -2,12 +2,36 @@
 	THORNS SUBREDDIT CSS by /u/r3v
 	GitHub Repository: https://github.com/r3v/ThornsSubredditCSS
 	
-	VERSION 1.0
+	VERSION 1.0.1b
 	
 	HISTORY: 
-		1.0 - Initial launch version
+		1.0.1 	- Author link, Sidebar table, RES tweaks
+		1.0 	- Initial launch version
 */
 
+
+.side thead {
+	background-color: #000000;
+	font-weight: bold;
+	color: #FFFFFF;
+	border-color: #000000 !important;
+	border-width: 1px  !important;
+	border-style: solid  !important;
+}
+.side table {
+	font-size: 95%;
+	color: #000000 !important ; 
+	font-weight: lighter;
+	background: #FFFFFF; 
+	border-color: #000000 !important;
+	border-width: 1px;
+	border-style: solid ;
+}
+.side tr, .side td {
+	border-color: #000000 !important;
+	border-width: 1px;
+	border-style: solid ;
+}
 
 /* TEMP!  REPLACE WITH THE RANDOM IMAGE */
 /* PORTLAND THORNS LOGO IN SIDEBAR */
@@ -158,6 +182,12 @@ font-size:0;
 }
 
 
+/* FLAIR "EDIT" BUTTON */
+.side a.flairselectbtn {
+	color: #990000;
+}
+
+
 /* PRETTY SUBMIT LINKS by /u/RainbowCrash*/
 .morelink {
 	font-weight:normal;
@@ -267,9 +297,15 @@ font-size:0;
 }
 
 
+/* CHANGE AUTHOR COLOR */
+a.author, .res a.author {
+    color: #000000 !important;
+}
+
+
 /* CHANGE MOD HIGHLIGHT */
 a.author.moderator, .res a.author.moderator {
-	 color: #D90000;
+	 color: #D90000 !important;
 	 padding: 2px;
 	 border-radius: 1px;
 	 font-weight: bold
@@ -356,6 +392,36 @@ a.author.moderator, .res a.author.moderator {
 }
 
 /* END CUSTOM FLAIR CSS --------------------------------------------------------------- */
+
+
+/* BEGIN REDDIT ENHANCEMENT SUITE (RES) SPECIFIC CHANGES ------------------------------ */
+
+
+/* RES SPECIFIC: KEYBOARD NAVIGATION BOX TO GREY INSTEAD OF BLUE */
+.res .RES-keyNav-activeElement,
+.res .commentarea .RES-keyNav-activeElement .md,
+.res .commentarea .noncollapsed .RES-keyNav-activeElement.entry {
+    background: #E9E9E9 !important;
+}
+
+
+/* RES SPECIFIC: USERBAR TOGGLE BUTTON */
+#userbarToggle {
+    background-color: #FFFFFF !important;
+    color: #C9C9C9 !important;   /* <-- colours the cursor*/
+}
+
+
+/* RES SPECIFIC: SHORTCUT EDITING CONTROLS IN UPPER RIGHT */
+#RESShortcutsEditContainer, #RESShortcutsSort, #RESShortcutsRight, #RESShortcutsAdd, #RESShortcutsTrash, #RESShortcutsLeft {
+    background-color: #000000 !important;
+    color: #C9C9C9 !important ;
+}
+
+/* END REDDIT ENHANCEMENT SUITE (RES) SPECIFIC CHANGES -------------------------------- */
+
+
+
 
 /* Resource List:
 	%%Portland-Thorns-FC-logo-300%% - 300x300 Thorns logo
