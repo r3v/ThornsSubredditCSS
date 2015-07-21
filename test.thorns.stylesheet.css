@@ -2,36 +2,14 @@
 	THORNS SUBREDDIT CSS by /u/r3v
 	GitHub Repository: https://github.com/r3v/ThornsSubredditCSS
 	
-	VERSION 1.0.1b
+	VERSION 1.0.1
 	
 	HISTORY: 
-		1.0.1 	- Author link, Sidebar table, RES tweaks
+		1.0.1 	- Author link, Sidebar table, RES tweaks, Title links darkened
 		1.0 	- Initial launch version
 */
 
 
-.side thead {
-	background-color: #000000;
-	font-weight: bold;
-	color: #FFFFFF;
-	border-color: #000000 !important;
-	border-width: 1px  !important;
-	border-style: solid  !important;
-}
-.side table {
-	font-size: 95%;
-	color: #000000 !important ; 
-	font-weight: lighter;
-	background: #FFFFFF; 
-	border-color: #000000 !important;
-	border-width: 1px;
-	border-style: solid ;
-}
-.side tr, .side td {
-	border-color: #000000 !important;
-	border-width: 1px;
-	border-style: solid ;
-}
 
 /* TEMP!  REPLACE WITH THE RANDOM IMAGE */
 /* PORTLAND THORNS LOGO IN SIDEBAR */
@@ -41,7 +19,6 @@
 .titlebox .redditname:before {
     content: url(%%sidebar-image%%);
 }
-
 
 
 /* BEGIN CHANGES FOR HEADER SECTION --------------------------------------------------- */
@@ -280,6 +257,32 @@ font-size:0;
 /* END PRETTY SUBMIT LINKS */
 
 
+/* BEGIN TABLE CHANGES */
+.side thead {
+	background-color: #000000;
+	font-weight: bold;
+	color: #FFFFFF;
+	border-color: #000000 !important;
+	border-width: 1px  !important;
+	border-style: solid  !important;
+}
+.side table {
+	font-size: 95%;
+	color: #000000 !important ; 
+	font-weight: lighter;
+	background: #FFFFFF; 
+	border-color: #000000 !important;
+	border-width: 1px;
+	border-style: solid ;
+}
+.side tr, .side td {
+	border-color: #000000 !important;
+	border-width: 1px;
+	border-style: solid ;
+}
+/* END TABLE CHANGES */
+
+
 /* END CHANGES FOR SIDEBAR SECTION ---------------------------------------------------- */
 
 /* BEGIN MISCELLANEOUS CHANGES  ------------------------------------------------------- */
@@ -324,7 +327,7 @@ a.author.moderator, .res a.author.moderator {
 	color: #FF0000 !important;
 }
 .stickied .title:visited {
-	color: #D90000 !important;
+	color: #890000 !important;
 }
 .stickied .stickied-tagline {
 	color: #D90000 !important;
@@ -333,16 +336,16 @@ a.author.moderator, .res a.author.moderator {
 
 /* LINK COLOR CHANGES */
 .title.click, .title:visited {
-	color: #FF0000 !important;
+	color: #D90000 !important;
 }
 .title:link {
-	color: #990000 !important;
+	color: #890000 !important;
 }
 .side p a {
-	color: #FF0000;
+	color: #D90000;
 }
 .side table a {
-	color: #FF0000;
+	color: #D90000;
 }
 
 
