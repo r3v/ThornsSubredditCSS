@@ -1,12 +1,13 @@
 /*
 	THORNS SUBREDDIT CSS by /u/r3v
 	GitHub Repository: https://github.com/r3v/ThornsSubredditCSS
-	
-	VERSION 1.0.1
-	
-	HISTORY: 
-		1.0.1 	- Author link, Sidebar table, RES tweaks, Title links darkened
-		1.0 	- Initial launch version
+
+	VERSION 1.0.2b1
+
+	HISTORY:
+		1.0.2 - Fixed swapped title link colors
+		1.0.1 - Author link, Sidebar table, RES tweaks, Title links darkened
+		1.0   - Initial launch version
 */
 
 
@@ -137,7 +138,7 @@ font-size:0;
 /* SUBSCRIBERS/HERE NOW CHANGES */
 .subscribers .word {
  	display: none;
-}  
+}
 .subscribers .number::after {
 	content: " Supporters";
 }
@@ -191,9 +192,9 @@ font-size:0;
 	display: none;
 }
 .morelink {
-	color:#FFFFFF; 
-	font-family:Verdana, Arial, sans-serif; 
-	font-size:16px; 
+	color:#FFFFFF;
+	font-family:Verdana, Arial, sans-serif;
+	font-size:16px;
 	width: 145px;
 }
 .morelink a, .morelink a:hover {
@@ -268,9 +269,9 @@ font-size:0;
 }
 .side table {
 	font-size: 95%;
-	color: #000000 !important ; 
+	color: #000000 !important ;
 	font-weight: lighter;
-	background: #FFFFFF; 
+	background: #FFFFFF;
 	border-color: #000000 !important;
 	border-width: 1px;
 	border-style: solid ;
@@ -293,7 +294,7 @@ font-size:0;
 .self .thumbnail {
 	background-image: url(%%Portland-Thorns-FC-logo-faded-70x50%%);
 	height: 50px;
-} 
+}
 .self .thumbnail {
 	background: url(%%Portland-Thorns-FC-logo-faded-70x50%%) no-repeat 0 0;
 	height: 50px;
@@ -336,10 +337,10 @@ a.author.moderator, .res a.author.moderator {
 
 /* LINK COLOR CHANGES */
 .title.click, .title:visited {
-	color: #D90000 !important;
+	color: #890000 !important;
 }
 .title:link {
-	color: #890000 !important;
+	color: #D90000 !important;
 }
 .side p a {
 	color: #D90000;
@@ -367,29 +368,29 @@ a.author.moderator, .res a.author.moderator {
 	white-space: nowrap;
 }
 .flair-NWSL{
-	background-position: 0 0; 
-	min-width: 22px; 
+	background-position: 0 0;
+	min-width: 22px;
 	height: 22px;
-	line-height: 22px; 
+	line-height: 22px;
 }
 .flair-NWSL:hover {
 	text-indent: 24px;
 }
-.flair-Riveters{ 
-	background-position: 0 -72px; 
-	min-width: 22px; 
+.flair-Riveters{
+	background-position: 0 -72px;
+	min-width: 22px;
 	height: 22px;
-	line-height: 22px; 
+	line-height: 22px;
 }
 .flair-Riveters:hover {
 	text-indent: 24px;
 }
-.flair-Thorns{ 
-	background-position: 0 -144px; 
-	min-width: 22px; 
-	height: 22px; 
-	line-height: 22px; 
-} 
+.flair-Thorns{
+	background-position: 0 -144px;
+	min-width: 22px;
+	height: 22px;
+	line-height: 22px;
+}
 .flair-Thorns:hover {
 	text-indent: 24px;
 }
@@ -431,9 +432,6 @@ a.author.moderator, .res a.author.moderator {
 	%%Portland-Thorns-FC-logo-100%% - 100x100 Thorns logo
 	%%Portland-Thorns-FC-logo-faded-70x50%% - Used for self post thumbnail
 	%%sidebar-image%% - 300x300 Image for the top of the sidebar
-	%%spritesheet%% - Sprite sheet for flair. 
+	%%spritesheet%% - Sprite sheet for flair.
 	    (Made with: http://spritegen.website-performance.org/oldsites/spritegen/htdocs/)
 */
-
-
-
