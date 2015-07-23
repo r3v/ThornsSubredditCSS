@@ -1,4 +1,4 @@
-# ThornsSubredditCSS
+# Thorns_Subreddit_CSS
 
 CSS Stylesheet for the Thorns sub-reddit.
 
