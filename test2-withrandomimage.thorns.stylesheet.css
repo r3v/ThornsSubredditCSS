@@ -1,139 +1,15 @@
 /*
 	THORNS SUBREDDIT CSS by /u/r3v
 	GitHub Repository: https://github.com/r3v/ThornsSubredditCSS
-	
-	VERSION 1.0
-	
-	HISTORY: 
-		1.0 - Initial launch version
+
+	VERSION 1.1b1
+
+	HISTORY:
+		1.1   - Random sidebar image
+		1.0.2 - Fixed swapped title link colors
+		1.0.1 - Author link, Sidebar table, RES tweaks, Title links darkened
+		1.0   - Initial launch version
 */
-
-
-/* TEMP!  REPLACE WITH THE RANDOM IMAGE */
-/* PORTLAND THORNS LOGO IN SIDEBAR */
-/* 
-.titlebox .redditname {
-    position: relative;
-}
-.titlebox .redditname:before {
-    content: url(%%Portland-Thorns-FC-logo-300%%);
-}
- */
-
-
-
-/* 270 will need to be adjusted depending on the height of your rand image */
-.side {
-    position: absolute;
-    top: 350px; /*was 270 */
-    right: 0;
-}
-
-/* The height and width of all images must match. Change 228 and 300 to match your image dimensions. */
-input[name=uh] ~ a:after,
-.user .login-required:after {
-    position: absolute;
-    top: 23px;
-    right: 0;
-    z-index: 0;
-    width: 300px;
-    height: 300px; /* was 228 */
-    border: 0;
-}
-
-
-/* Name all your images rand followed by 0-9 and a-z, you can have 36 possible
-   random images, feel free to reuse images if you have less than 36. For
-   example, you could have 12 images repeated 3 times.
-*/
-input[name=uh][value^="0"] ~ a:after { content: url('%%rand-01%%'); }
-input[name=uh][value^="1"] ~ a:after { content: url('%%rand-02%%'); }
-input[name=uh][value^="2"] ~ a:after { content: url('%%rand-03%%'); }
-input[name=uh][value^="3"] ~ a:after { content: url('%%rand-04%%'); }
-input[name=uh][value^="4"] ~ a:after { content: url('%%rand-05%%'); }
-input[name=uh][value^="5"] ~ a:after { content: url('%%rand-06%%'); }
-input[name=uh][value^="6"] ~ a:after { content: url('%%rand-07%%'); }
-input[name=uh][value^="7"] ~ a:after { content: url('%%rand-01%%'); }
-input[name=uh][value^="8"] ~ a:after { content: url('%%rand-02%%'); }
-input[name=uh][value^="9"] ~ a:after { content: url('%%rand-03%%'); }
-input[name=uh][value^="a"] ~ a:after { content: url('%%rand-04%%'); }
-input[name=uh][value^="b"] ~ a:after { content: url('%%rand-05%%'); }
-input[name=uh][value^="c"] ~ a:after { content: url('%%rand-06%%'); }
-input[name=uh][value^="d"] ~ a:after { content: url('%%rand-07%%'); }
-input[name=uh][value^="e"] ~ a:after { content: url('%%rand-01%%'); }
-input[name=uh][value^="f"] ~ a:after { content: url('%%rand-02%%'); }
-input[name=uh][value^="g"] ~ a:after { content: url('%%rand-03%%'); }
-input[name=uh][value^="h"] ~ a:after { content: url('%%rand-04%%'); }
-input[name=uh][value^="i"] ~ a:after { content: url('%%rand-05%%'); }
-input[name=uh][value^="j"] ~ a:after { content: url('%%rand-06%%'); }
-input[name=uh][value^="k"] ~ a:after { content: url('%%rand-07%%'); }
-input[name=uh][value^="l"] ~ a:after { content: url('%%rand-01%%'); }
-input[name=uh][value^="m"] ~ a:after { content: url('%%rand-02%%'); }
-input[name=uh][value^="n"] ~ a:after { content: url('%%rand-03%%'); }
-input[name=uh][value^="o"] ~ a:after { content: url('%%rand-04%%'); }
-input[name=uh][value^="p"] ~ a:after { content: url('%%rand-05%%'); }
-input[name=uh][value^="q"] ~ a:after { content: url('%%rand-06%%'); }
-input[name=uh][value^="r"] ~ a:after { content: url('%%rand-07%%'); }
-input[name=uh][value^="s"] ~ a:after { content: url('%%rand-01%%'); }
-input[name=uh][value^="t"] ~ a:after { content: url('%%rand-02%%'); }
-input[name=uh][value^="u"] ~ a:after { content: url('%%rand-03%%'); }
-input[name=uh][value^="v"] ~ a:after { content: url('%%rand-04%%'); }
-input[name=uh][value^="w"] ~ a:after { content: url('%%rand-05%%'); }
-input[name=uh][value^="x"] ~ a:after { content: url('%%rand-06%%'); }
-input[name=uh][value^="y"] ~ a:after { content: url('%%rand-07%%'); }
-input[name=uh][value^="z"] ~ a:after { content: url('%%rand-01%%'); }
-
-/* Moves the username and bar to the top, may need adjustment depending on
-   your other subreddit css. */
-#header-bottom-right {
-    position: absolute;
-    right: 0px;
-    top: 19px;
-    padding: 4px 4px 4px 7px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 7px;
-    line-height: 12px;
-    height: 15px;
- }
- 
- 
- /* Adjust the -228 to match the height of your image. Along with the 300 and
-   228 to match the width and height of your image. At the end of your sidebar
-   description create an H5 link to your subreddit homepage.
-   Like this:  #####[Subreddit Name](http://reddit.com/r/SubredditName)
-*/
-.side .usertext-body h5:last-of-type a {
-    position: absolute;
-    top: -228px;
-    right: -5px;
-    width: 300px;
-    height: 300px; /* was 228 */
-    z-index: 100;
-    border: 0px;
-    font-size: 0px;
-}
-
-/* HOW THIS ALL WORKS:
-
-   Everytime you load the page there is an invisible form (input) that relates
-   to the logout button which generates a long random letter-number combo. This
-   code takes the first digit of that code and then displays a specific image
-   dependent on the letter or number that was generated when the page loaded.
-   Since the random character comes from the logout button there are a few things
-   to take in to consideration. Firstly, the random image that is created will
-   log you out if you click on it. So part of this code repositions a link from
-   the sidebar above the random image, so clicking on it will take you to the link
-   instead of logging you out. The other is that if a user isn't logged in the
-   link to logout won't exist, so neither will the random image. It only
-   displays to users who are logged in. So we target the Login link for those users
-   and put a static image there that is only visible to people not logged in. This
-   would prevent the page from having an empty chunk above the sidebar for
-   non-logged in viewers. The code for this is below.
-*/
-
-/* Pick your favorite of the random images to be the static one that loads for non-logged in users.*/
-.user .login-required:after { content: url('%%rand-07%%'); }
-
 
 
 /* BEGIN CHANGES FOR HEADER SECTION --------------------------------------------------- */
@@ -252,7 +128,7 @@ font-size:0;
 /* SUBSCRIBERS/HERE NOW CHANGES */
 .subscribers .word {
  	display: none;
-}  
+}
 .subscribers .number::after {
 	content: " Supporters";
 }
@@ -271,6 +147,12 @@ font-size:0;
     text-align:center;
     border:0;
     margin:0 auto 3px auto;
+}
+
+
+/* FLAIR "EDIT" BUTTON */
+.side a.flairselectbtn {
+	color: #990000;
 }
 
 
@@ -300,9 +182,9 @@ font-size:0;
 	display: none;
 }
 .morelink {
-	color:#FFFFFF; 
-	font-family:Verdana, Arial, sans-serif; 
-	font-size:16px; 
+	color:#FFFFFF;
+	font-family:Verdana, Arial, sans-serif;
+	font-size:16px;
 	width: 145px;
 }
 .morelink a, .morelink a:hover {
@@ -366,6 +248,105 @@ font-size:0;
 /* END PRETTY SUBMIT LINKS */
 
 
+/* BEGIN TABLE CHANGES */
+.side thead {
+	background-color: #000000;
+	font-weight: bold;
+	color: #FFFFFF;
+	border-color: #000000 !important;
+	border-width: 1px  !important;
+	border-style: solid  !important;
+}
+.side table {
+	font-size: 95%;
+	color: #000000 !important ;
+	font-weight: lighter;
+	background: #FFFFFF;
+	border-color: #000000 !important;
+	border-width: 1px;
+	border-style: solid ;
+}
+.side tr, .side td {
+	border-color: #000000 !important;
+	border-width: 1px;
+	border-style: solid ;
+}
+/* END TABLE CHANGES */
+
+
+/* BEGIN RANDOM SIDEBAR IMAGE */
+/* based on https://www.reddit.com/r/csshelp/wiki/snippets#wiki_random_image_above_sidebar */
+.side {
+    position: absolute;
+    top: 430px; /*was 270 */
+    right: 0;
+}
+input[name=uh] ~ a:after,
+.user .login-required:after {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    z-index: 0;
+    width: 305px;
+    height: 300px; /* was 228 */
+    border: 0;
+}
+/* 36 possible random images */
+input[name=uh][value^="0"] ~ a:after { content: url('%%rand-01%%'); }
+input[name=uh][value^="1"] ~ a:after { content: url('%%rand-02%%'); }
+input[name=uh][value^="2"] ~ a:after { content: url('%%rand-03%%'); }
+input[name=uh][value^="3"] ~ a:after { content: url('%%rand-04%%'); }
+input[name=uh][value^="4"] ~ a:after { content: url('%%rand-05%%'); }
+input[name=uh][value^="5"] ~ a:after { content: url('%%rand-06%%'); }
+input[name=uh][value^="6"] ~ a:after { content: url('%%rand-07%%'); }
+input[name=uh][value^="7"] ~ a:after { content: url('%%rand-08%%'); }
+input[name=uh][value^="8"] ~ a:after { content: url('%%rand-09%%'); }
+input[name=uh][value^="9"] ~ a:after { content: url('%%rand-10%%'); }
+input[name=uh][value^="a"] ~ a:after { content: url('%%rand-11%%'); }
+input[name=uh][value^="b"] ~ a:after { content: url('%%rand-12%%'); }
+input[name=uh][value^="c"] ~ a:after { content: url('%%rand-01%%'); }
+input[name=uh][value^="d"] ~ a:after { content: url('%%rand-02%%'); }
+input[name=uh][value^="e"] ~ a:after { content: url('%%rand-03%%'); }
+input[name=uh][value^="f"] ~ a:after { content: url('%%rand-04%%'); }
+input[name=uh][value^="g"] ~ a:after { content: url('%%rand-05%%'); }
+input[name=uh][value^="h"] ~ a:after { content: url('%%rand-06%%'); }
+input[name=uh][value^="i"] ~ a:after { content: url('%%rand-07%%'); }
+input[name=uh][value^="j"] ~ a:after { content: url('%%rand-08%%'); }
+input[name=uh][value^="k"] ~ a:after { content: url('%%rand-09%%'); }
+input[name=uh][value^="l"] ~ a:after { content: url('%%rand-10%%'); }
+input[name=uh][value^="m"] ~ a:after { content: url('%%rand-11%%'); }
+input[name=uh][value^="n"] ~ a:after { content: url('%%rand-12%%'); }
+input[name=uh][value^="o"] ~ a:after { content: url('%%rand-01%%'); }
+input[name=uh][value^="p"] ~ a:after { content: url('%%rand-02%%'); }
+input[name=uh][value^="q"] ~ a:after { content: url('%%rand-03%%'); }
+input[name=uh][value^="r"] ~ a:after { content: url('%%rand-04%%'); }
+input[name=uh][value^="s"] ~ a:after { content: url('%%rand-05%%'); }
+input[name=uh][value^="t"] ~ a:after { content: url('%%rand-06%%'); }
+input[name=uh][value^="u"] ~ a:after { content: url('%%rand-07%%'); }
+input[name=uh][value^="v"] ~ a:after { content: url('%%rand-08%%'); }
+input[name=uh][value^="w"] ~ a:after { content: url('%%rand-09%%'); }
+input[name=uh][value^="x"] ~ a:after { content: url('%%rand-10%%'); }
+input[name=uh][value^="y"] ~ a:after { content: url('%%rand-11%%'); }
+input[name=uh][value^="z"] ~ a:after { content: url('%%rand-12%%'); }
+/*
+   At the end of your sidebar description create an H5 link to your subreddit homepage.
+   Like this:  #####[Subreddit Name](http://reddit.com/r/SubredditName)
+*/
+.side .usertext-body h5:last-of-type a {
+    position: absolute;
+    top: -228px;
+    right: -5px;
+    width: 300px;
+    height: 300px; /* was 228 */
+    z-index: 100;
+    border: 0px;
+    font-size: 0px;
+}
+/* Pick an image to display to non-logged in users. */
+.user .login-required:after { content: url('%%rand-11%%'); }
+/* END RANDOM SIDEBAR IMAGE */
+
+
 /* END CHANGES FOR SIDEBAR SECTION ---------------------------------------------------- */
 
 /* BEGIN MISCELLANEOUS CHANGES  ------------------------------------------------------- */
@@ -376,16 +357,22 @@ font-size:0;
 .self .thumbnail {
 	background-image: url(%%Portland-Thorns-FC-logo-faded-70x50%%);
 	height: 50px;
-} 
+}
 .self .thumbnail {
 	background: url(%%Portland-Thorns-FC-logo-faded-70x50%%) no-repeat 0 0;
 	height: 50px;
 }
 
 
+/* CHANGE AUTHOR COLOR */
+a.author, .res a.author {
+    color: #000000 !important;
+}
+
+
 /* CHANGE MOD HIGHLIGHT */
 a.author.moderator, .res a.author.moderator {
-	 color: #D90000;
+	 color: #D90000 !important;
 	 padding: 2px;
 	 border-radius: 1px;
 	 font-weight: bold
@@ -404,7 +391,7 @@ a.author.moderator, .res a.author.moderator {
 	color: #FF0000 !important;
 }
 .stickied .title:visited {
-	color: #D90000 !important;
+	color: #890000 !important;
 }
 .stickied .stickied-tagline {
 	color: #D90000 !important;
@@ -413,16 +400,16 @@ a.author.moderator, .res a.author.moderator {
 
 /* LINK COLOR CHANGES */
 .title.click, .title:visited {
-	color: #FF0000 !important;
+	color: #890000 !important;
 }
 .title:link {
-	color: #990000 !important;
+	color: #D90000 !important;
 }
 .side p a {
-	color: #FF0000;
+	color: #D90000;
 }
 .side table a {
-	color: #FF0000;
+	color: #D90000;
 }
 
 
@@ -444,42 +431,70 @@ a.author.moderator, .res a.author.moderator {
 	white-space: nowrap;
 }
 .flair-NWSL{
-	background-position: 0 0; 
-	min-width: 22px; 
+	background-position: 0 0;
+	min-width: 22px;
 	height: 22px;
-	line-height: 22px; 
+	line-height: 22px;
 }
 .flair-NWSL:hover {
 	text-indent: 24px;
 }
-.flair-Riveters{ 
-	background-position: 0 -72px; 
-	min-width: 22px; 
+.flair-Riveters{
+	background-position: 0 -72px;
+	min-width: 22px;
 	height: 22px;
-	line-height: 22px; 
+	line-height: 22px;
 }
 .flair-Riveters:hover {
 	text-indent: 24px;
 }
-.flair-Thorns{ 
-	background-position: 0 -144px; 
-	min-width: 22px; 
-	height: 22px; 
-	line-height: 22px; 
-} 
+.flair-Thorns{
+	background-position: 0 -144px;
+	min-width: 22px;
+	height: 22px;
+	line-height: 22px;
+}
 .flair-Thorns:hover {
 	text-indent: 24px;
 }
 
 /* END CUSTOM FLAIR CSS --------------------------------------------------------------- */
 
+
+/* BEGIN REDDIT ENHANCEMENT SUITE (RES) SPECIFIC CHANGES ------------------------------ */
+
+
+/* RES SPECIFIC: KEYBOARD NAVIGATION BOX TO GREY INSTEAD OF BLUE */
+.res .RES-keyNav-activeElement,
+.res .commentarea .RES-keyNav-activeElement .md,
+.res .commentarea .noncollapsed .RES-keyNav-activeElement.entry {
+    background: #E9E9E9 !important;
+}
+
+
+/* RES SPECIFIC: USERBAR TOGGLE BUTTON */
+#userbarToggle {
+    background-color: #FFFFFF !important;
+    color: #C9C9C9 !important;   /* <-- colours the cursor*/
+}
+
+
+/* RES SPECIFIC: SHORTCUT EDITING CONTROLS IN UPPER RIGHT */
+#RESShortcutsEditContainer, #RESShortcutsSort, #RESShortcutsRight, #RESShortcutsAdd, #RESShortcutsTrash, #RESShortcutsLeft {
+    background-color: #000000 !important;
+    color: #C9C9C9 !important ;
+}
+
+/* END REDDIT ENHANCEMENT SUITE (RES) SPECIFIC CHANGES -------------------------------- */
+
+
+
+
 /* Resource List:
 	%%Portland-Thorns-FC-logo-300%% - 300x300 Thorns logo
 	%%Portland-Thorns-FC-logo-100%% - 100x100 Thorns logo
 	%%Portland-Thorns-FC-logo-faded-70x50%% - Used for self post thumbnail
-	%%spritesheet%% - Sprite sheet for flair. 
+	%%sidebar-image%% - 300x300 Image for the top of the sidebar
+	%%spritesheet%% - Sprite sheet for flair.
 	    (Made with: http://spritegen.website-performance.org/oldsites/spritegen/htdocs/)
 */
-
-
-
