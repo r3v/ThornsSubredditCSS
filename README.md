@@ -23,6 +23,8 @@ Maintained by /u/r3v
 
 ### RANDOM IMAGE LIST:
 
+Gallery: http://imgur.com/a/826qs#0
+
 01. Thorns FC Logo
 02. Rose City Riveters Logo
 03. PLAYER: Nadine Angerer (1)
@@ -36,7 +38,7 @@ Maintained by /u/r3v
 11. PLAYER: Allie Long (10)
 12. PLAYER: Emily Menges (2)
 13. PLAYER: Alex Morgan (13)
-14. PLAYER: Clare Polkinghorne (?)
+14. PLAYER: Clare Polkinghorne (9)
 15. PLAYER: Lianne Sanderson (?)
 16. PLAYER: Mana Shim (6)
 17. PLAYER: Christine Sinclair (12)
