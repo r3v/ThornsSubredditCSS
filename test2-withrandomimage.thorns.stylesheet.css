@@ -2,13 +2,15 @@
 	THORNS SUBREDDIT CSS by /u/r3v
 	GitHub Repository: https://github.com/r3v/ThornsSubredditCSS
 
-	VERSION 1.1b1
+	VERSION 1.1b2
 
 	HISTORY:
 		1.1   - Random sidebar image
 		1.0.2 - Fixed swapped title link colors
 		1.0.1 - Author link, Sidebar table, RES tweaks, Title links darkened
 		1.0   - Initial launch version
+
+		Major thanks are owed to the folks in /r/CSSHelp!
 */
 
 
@@ -275,23 +277,26 @@ font-size:0;
 
 
 /* BEGIN RANDOM SIDEBAR IMAGE */
-/* based on https://www.reddit.com/r/csshelp/wiki/snippets#wiki_random_image_above_sidebar */
+/* based on http://j.mp/1McAQ9R */
 .side {
-    position: absolute;
-    top: 430px; /*was 270 */
-    right: 0;
+    /*position: absolute;*/
+    /*top: 430px; */
+    /*right: 0;*/
+		margin-top: 310px;
 }
-input[name=uh] ~ a:after,
-.user .login-required:after {
+input[name=uh] ~ a:after, .user .login-required:after {
     position: absolute;
-    top: 30px;
-    right: 0;
+    top: 32px;
+    right: 0px;
     z-index: 0;
     width: 305px;
     height: 300px; /* was 228 */
     border: 0;
 }
-/* 36 possible random images */
+.res-navTop input[name=uh] ~ a:after {
+    top: 310px;
+}
+/* 36 possible random images - upload them named rand-01 thru rand-36*/
 input[name=uh][value^="0"] ~ a:after { content: url('%%rand-01%%'); }
 input[name=uh][value^="1"] ~ a:after { content: url('%%rand-02%%'); }
 input[name=uh][value^="2"] ~ a:after { content: url('%%rand-03%%'); }
@@ -304,30 +309,30 @@ input[name=uh][value^="8"] ~ a:after { content: url('%%rand-09%%'); }
 input[name=uh][value^="9"] ~ a:after { content: url('%%rand-10%%'); }
 input[name=uh][value^="a"] ~ a:after { content: url('%%rand-11%%'); }
 input[name=uh][value^="b"] ~ a:after { content: url('%%rand-12%%'); }
-input[name=uh][value^="c"] ~ a:after { content: url('%%rand-01%%'); }
-input[name=uh][value^="d"] ~ a:after { content: url('%%rand-02%%'); }
-input[name=uh][value^="e"] ~ a:after { content: url('%%rand-03%%'); }
-input[name=uh][value^="f"] ~ a:after { content: url('%%rand-04%%'); }
-input[name=uh][value^="g"] ~ a:after { content: url('%%rand-05%%'); }
-input[name=uh][value^="h"] ~ a:after { content: url('%%rand-06%%'); }
-input[name=uh][value^="i"] ~ a:after { content: url('%%rand-07%%'); }
-input[name=uh][value^="j"] ~ a:after { content: url('%%rand-08%%'); }
-input[name=uh][value^="k"] ~ a:after { content: url('%%rand-09%%'); }
-input[name=uh][value^="l"] ~ a:after { content: url('%%rand-10%%'); }
-input[name=uh][value^="m"] ~ a:after { content: url('%%rand-11%%'); }
-input[name=uh][value^="n"] ~ a:after { content: url('%%rand-12%%'); }
-input[name=uh][value^="o"] ~ a:after { content: url('%%rand-01%%'); }
-input[name=uh][value^="p"] ~ a:after { content: url('%%rand-02%%'); }
-input[name=uh][value^="q"] ~ a:after { content: url('%%rand-03%%'); }
-input[name=uh][value^="r"] ~ a:after { content: url('%%rand-04%%'); }
-input[name=uh][value^="s"] ~ a:after { content: url('%%rand-05%%'); }
-input[name=uh][value^="t"] ~ a:after { content: url('%%rand-06%%'); }
-input[name=uh][value^="u"] ~ a:after { content: url('%%rand-07%%'); }
-input[name=uh][value^="v"] ~ a:after { content: url('%%rand-08%%'); }
-input[name=uh][value^="w"] ~ a:after { content: url('%%rand-09%%'); }
-input[name=uh][value^="x"] ~ a:after { content: url('%%rand-10%%'); }
-input[name=uh][value^="y"] ~ a:after { content: url('%%rand-11%%'); }
-input[name=uh][value^="z"] ~ a:after { content: url('%%rand-12%%'); }
+input[name=uh][value^="c"] ~ a:after { content: url('%%rand-13%%'); }
+input[name=uh][value^="d"] ~ a:after { content: url('%%rand-14%%'); }
+input[name=uh][value^="e"] ~ a:after { content: url('%%rand-15%%'); }
+input[name=uh][value^="f"] ~ a:after { content: url('%%rand-16%%'); }
+input[name=uh][value^="g"] ~ a:after { content: url('%%rand-17%%'); }
+input[name=uh][value^="h"] ~ a:after { content: url('%%rand-18%%'); }
+input[name=uh][value^="i"] ~ a:after { content: url('%%rand-19%%'); }
+input[name=uh][value^="j"] ~ a:after { content: url('%%rand-20%%'); }
+input[name=uh][value^="k"] ~ a:after { content: url('%%rand-21%%'); }
+input[name=uh][value^="l"] ~ a:after { content: url('%%rand-22%%'); }
+input[name=uh][value^="m"] ~ a:after { content: url('%%rand-23%%'); }
+input[name=uh][value^="n"] ~ a:after { content: url('%%rand-24%%'); }
+input[name=uh][value^="o"] ~ a:after { content: url('%%rand-25%%'); }
+input[name=uh][value^="p"] ~ a:after { content: url('%%rand-26%%'); }
+input[name=uh][value^="q"] ~ a:after { content: url('%%rand-27%%'); }
+input[name=uh][value^="r"] ~ a:after { content: url('%%rand-28%%'); }
+input[name=uh][value^="s"] ~ a:after { content: url('%%rand-29%%'); }
+input[name=uh][value^="t"] ~ a:after { content: url('%%rand-30%%'); }
+input[name=uh][value^="u"] ~ a:after { content: url('%%rand-31%%'); }
+input[name=uh][value^="v"] ~ a:after { content: url('%%rand-32%%'); }
+input[name=uh][value^="w"] ~ a:after { content: url('%%rand-33%%'); }
+input[name=uh][value^="x"] ~ a:after { content: url('%%rand-34%%'); }
+input[name=uh][value^="y"] ~ a:after { content: url('%%rand-35%%'); }
+input[name=uh][value^="z"] ~ a:after { content: url('%%rand-36%%'); }
 /*
    At the end of your sidebar description create an H5 link to your subreddit homepage.
    Like this:  #####[Subreddit Name](http://reddit.com/r/SubredditName)
