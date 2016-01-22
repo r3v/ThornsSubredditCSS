@@ -11,10 +11,12 @@ Maintained by /u/r3v
 * Numbered Flair for players
 * Fix table header outline
 * Colors for Moderation Tools
+* Colors for Sidebar List Links
 * Colors for Recent Links
 * Colors for RES Never Ending Reddit
 * Colors for Reddit footer
-* Random sidebar image
+* FIX: sidebar image acting as logout button
+* √	Random sidebar image
 * √	Sidebar Table Header, Table Body
 * √	Color for "RES-keyNav-activeElement"
 * √	Color for RES "userbarToggle"
