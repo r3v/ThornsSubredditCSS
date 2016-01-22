@@ -2,9 +2,10 @@
 	THORNS SUBREDDIT CSS by /u/r3v
 	GitHub Repository: https://github.com/r3v/Thorns_Subreddit_CSS
 
-	VERSION 1.1.1
+	VERSION 1.1.2
 
 	HISTORY:
+		1.1.2 - Fixed link colors in sidebar.
 		1.1.1 - Pinned user notification bar to top, fixing RES 'navtop' bug
 		1.1   - Random sidebar image
 		1.0.2 - Fixed swapped title link colors
@@ -160,6 +161,14 @@ body.res #header #header-bottom-right{
 /* END CHANGES FOR HEADER SECTION ----------------------------------------------------- */
 
 /* BEGIN CHANGES FOR SIDEBAR SECTION -------------------------------------------------- */
+
+/* LINK COLORS IN SIDEBAR */
+.side a {
+     color: #D90000 !important ;
+}
+.side a:visited {
+     color: #B90000 !important ;
+}
 
 
 /* CHANGES TO SUBREDDIT NAME IN SIDEBAR */

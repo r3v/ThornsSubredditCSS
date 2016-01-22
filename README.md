@@ -8,14 +8,16 @@ Maintained by /u/r3v
 
 ### TODO LIST:
 
+* New sidebar images for 2016!
 * Numbered Flair for players
 * Fix table header outline
-* Colors for Moderation Tools
-* Colors for Sidebar List Links
-* Colors for Recent Links
 * Colors for RES Never Ending Reddit
 * Colors for Reddit footer
+* Colors of links in comments
 * FIX: sidebar image acting as logout button
+* √	Colors for Moderation Tools
+* √	Colors for Sidebar List Links
+* √	Colors for Recent Links
 * √	Random sidebar image
 * √	Sidebar Table Header, Table Body
 * √	Color for "RES-keyNav-activeElement"
