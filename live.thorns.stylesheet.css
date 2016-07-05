@@ -2,9 +2,10 @@
 	THORNS SUBREDDIT CSS by /u/r3v
 	GitHub Repository: https://github.com/r3v/Thorns_Subreddit_CSS
 
-	VERSION 1.1.2
+	VERSION 1.2
 
 	HISTORY:
+		1.2 - Changed from "rand" sidebar names to circumvent caching
 		1.1.2 - Fixed link colors in sidebar.
 		1.1.1 - Pinned user notification bar to top, fixing RES 'navtop' bug
 		1.1   - Random sidebar image
@@ -353,43 +354,43 @@ input[name=uh] ~ a:after, .user .login-required:after {
 	bar to the top */
     top: 110px;
 }
-/* 36 possible random images - upload them named rand-01 thru rand-36*/
-input[name=uh][value^="0"] ~ a:after { content: url('%%rand-01%%'); }
-input[name=uh][value^="1"] ~ a:after { content: url('%%rand-02%%'); }
-input[name=uh][value^="2"] ~ a:after { content: url('%%rand-03%%'); }
-input[name=uh][value^="3"] ~ a:after { content: url('%%rand-04%%'); }
-input[name=uh][value^="4"] ~ a:after { content: url('%%rand-05%%'); }
-input[name=uh][value^="5"] ~ a:after { content: url('%%rand-06%%'); }
-input[name=uh][value^="6"] ~ a:after { content: url('%%rand-07%%'); }
-input[name=uh][value^="7"] ~ a:after { content: url('%%rand-08%%'); }
-input[name=uh][value^="8"] ~ a:after { content: url('%%rand-09%%'); }
-input[name=uh][value^="9"] ~ a:after { content: url('%%rand-10%%'); }
-input[name=uh][value^="a"] ~ a:after { content: url('%%rand-11%%'); }
-input[name=uh][value^="b"] ~ a:after { content: url('%%rand-12%%'); }
-input[name=uh][value^="c"] ~ a:after { content: url('%%rand-13%%'); }
-input[name=uh][value^="d"] ~ a:after { content: url('%%rand-14%%'); }
-input[name=uh][value^="e"] ~ a:after { content: url('%%rand-15%%'); }
-input[name=uh][value^="f"] ~ a:after { content: url('%%rand-16%%'); }
-input[name=uh][value^="g"] ~ a:after { content: url('%%rand-17%%'); }
-input[name=uh][value^="h"] ~ a:after { content: url('%%rand-18%%'); }
-input[name=uh][value^="i"] ~ a:after { content: url('%%rand-19%%'); }
-input[name=uh][value^="j"] ~ a:after { content: url('%%rand-20%%'); }
-input[name=uh][value^="k"] ~ a:after { content: url('%%rand-21%%'); }
-input[name=uh][value^="l"] ~ a:after { content: url('%%rand-22%%'); }
-input[name=uh][value^="m"] ~ a:after { content: url('%%rand-23%%'); }
-input[name=uh][value^="n"] ~ a:after { content: url('%%rand-24%%'); }
-input[name=uh][value^="o"] ~ a:after { content: url('%%rand-25%%'); }
-input[name=uh][value^="p"] ~ a:after { content: url('%%rand-26%%'); }
-input[name=uh][value^="q"] ~ a:after { content: url('%%rand-27%%'); }
-input[name=uh][value^="r"] ~ a:after { content: url('%%rand-28%%'); }
-input[name=uh][value^="s"] ~ a:after { content: url('%%rand-29%%'); }
-input[name=uh][value^="t"] ~ a:after { content: url('%%rand-30%%'); }
-input[name=uh][value^="u"] ~ a:after { content: url('%%rand-31%%'); }
-input[name=uh][value^="v"] ~ a:after { content: url('%%rand-32%%'); }
-input[name=uh][value^="w"] ~ a:after { content: url('%%rand-33%%'); }
-input[name=uh][value^="x"] ~ a:after { content: url('%%rand-34%%'); }
-input[name=uh][value^="y"] ~ a:after { content: url('%%rand-35%%'); }
-input[name=uh][value^="z"] ~ a:after { content: url('%%rand-36%%'); }
+/* 36 possible random images */
+input[name=uh][value^="0"] ~ a:after { content: url('%%sb-logo-thorns%%'); }
+input[name=uh][value^="1"] ~ a:after { content: url('%%sb-logo-riveters%%'); }
+input[name=uh][value^="2"] ~ a:after { content: url('%%sb-logo-thorns-kit%%'); }
+input[name=uh][value^="3"] ~ a:after { content: url('%%sb-roster-berryhill-draft%%'); }
+input[name=uh][value^="4"] ~ a:after { content: url('%%sb-roster-betos-POTY%%'); }
+input[name=uh][value^="5"] ~ a:after { content: url('%%sb-roster-boureille-kick%%'); }
+input[name=uh][value^="6"] ~ a:after { content: url('%%sb-roster-brynjarsdottir-iceland%%'); }
+input[name=uh][value^="7"] ~ a:after { content: url('%%sb-roster-franch-laughing%%'); }
+input[name=uh][value^="8"] ~ a:after { content: url('%%sb-roster-heath-yeaaaah%%'); }
+input[name=uh][value^="9"] ~ a:after { content: url('%%sb-roster-henry-focus%%'); }
+input[name=uh][value^="a"] ~ a:after { content: url('%%sb-roster-horan-dribble%%'); }
+input[name=uh][value^="b"] ~ a:after { content: url('%%sb-roster-johnson-oldkit%%'); }
+input[name=uh][value^="c"] ~ a:after { content: url('%%sb-roster-klingenberg-lookin%%'); }
+input[name=uh][value^="d"] ~ a:after { content: url('%%sb-roster-long-yelling%%'); }
+input[name=uh][value^="e"] ~ a:after { content: url('%%sb-roster-menges-back%%'); }
+input[name=uh][value^="f"] ~ a:after { content: url('%%sb-roster-morris-ball%%'); }
+input[name=uh][value^="g"] ~ a:after { content: url('%%sb-roster-nadim-celebrating%%'); }
+input[name=uh][value^="h"] ~ a:after { content: url('%%sb-roster-raso-prancing%%'); }
+input[name=uh][value^="i"] ~ a:after { content: url('%%sb-roster-reynolds-kicking%%'); }
+input[name=uh][value^="j"] ~ a:after { content: url('%%sb-roster-shim-celebrating%%'); }
+input[name=uh][value^="k"] ~ a:after { content: url('%%sb-roster-sincy-crown%%'); }
+input[name=uh][value^="l"] ~ a:after { content: url('%%sb-roster-skogerboe-TEMP%%'); }
+input[name=uh][value^="m"] ~ a:after { content: url('%%sb-roster-sonnett-kick%%'); }
+input[name=uh][value^="n"] ~ a:after { content: url('%%sb-roster-weber-TEMP%%'); }
+input[name=uh][value^="o"] ~ a:after { content: url('%%sb-roster-williamson-anthem%%'); }
+input[name=uh][value^="p"] ~ a:after { content: url('%%sb-tifo-belles%%'); }
+input[name=uh][value^="q"] ~ a:after { content: url('%%sb-tifo-doctor-dozer%%'); }
+input[name=uh][value^="r"] ~ a:after { content: url('%%sb-tifo-pride%%'); }
+input[name=uh][value^="s"] ~ a:after { content: url('%%sb-tifo-super-heroes%%'); }
+input[name=uh][value^="t"] ~ a:after { content: url('%%sb-xtra-betos-header%%'); }
+input[name=uh][value^="u"] ~ a:after { content: url('%%sb-xtra-nadine%%'); }
+input[name=uh][value^="v"] ~ a:after { content: url('%%sb-xtra-postmatch%%'); }
+input[name=uh][value^="w"] ~ a:after { content: url('%%sb-xtra-pp%%'); }
+input[name=uh][value^="x"] ~ a:after { content: url('%%sb-xtra-redsmoke%%'); }
+input[name=uh][value^="y"] ~ a:after { content: url('%%sb-xtra-team-celebration%%'); }
+input[name=uh][value^="z"] ~ a:after { content: url('%%sb-xtra-tobin-yelling%%'); }
 /*
    At the end of your sidebar description create an H5 link to your subreddit homepage.
    Like this:  #####[Subreddit Name](http://reddit.com/r/SubredditName)
@@ -405,7 +406,7 @@ input[name=uh][value^="z"] ~ a:after { content: url('%%rand-36%%'); }
     font-size: 0px;
 }
 /* Pick an image to display to non-logged in users. */
-.user .login-required:after { content: url('%%rand-33%%'); }
+.user .login-required:after { content: url('%%sb-xtra-redsmoke%%'); }
 /* END RANDOM SIDEBAR IMAGE */
 
 
